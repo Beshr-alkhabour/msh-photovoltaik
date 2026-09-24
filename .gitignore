@@ -1,0 +1,9 @@
+# Design sources (mockup + raw video) – not part of the website
+Untitled.png
+*REVERSE*.mp4
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
