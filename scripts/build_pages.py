@@ -10,7 +10,7 @@ from pathlib import Path
 
 SITE = Path(__file__).resolve().parent.parent / "site"
 DOMAIN = "https://msh-photovoltaik.vercel.app"
-VERSION = "9"  # Cache-Busting für styles.css / script.js, bei Änderungen hochzählen
+VERSION = "10"  # Cache-Busting für styles.css / script.js, bei Änderungen hochzählen
 
 ICON_CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
 ICON_ARROW = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
