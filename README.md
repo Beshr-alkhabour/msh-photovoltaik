@@ -17,6 +17,8 @@ Dann http://localhost:5510 öffnen.
 - `site/styles.css` – Styles (Fonts self-hosted, keine Google-Server)
 - `site/script.js` – Navigation, Scroll-Animationen, Zähler, FAQ, Formular
 - `site/assets/` – Bilder (WebP), Hero-Video (Desktop + Mobil), Fonts, Favicon
+- `site/leistungen/*/`, `site/pv-montage-bremen/` – Unterseiten, **erzeugt** von `scripts/build_pages.py`
+  (Texte dort ändern, dann `python scripts/build_pages.py` ausführen; schreibt auch `sitemap.xml` und `robots.txt`)
 
 ## Offen
 

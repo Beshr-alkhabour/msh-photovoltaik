@@ -20,7 +20,8 @@
   nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setNav(false)));
 
   // Active nav link by section in view
-  const links = [...document.querySelectorAll(".nav__link")];
+  // Only same-page anchors (#…) take part; links to other pages keep their server-set state
+  const links = [...document.querySelectorAll('.nav__link[href^="#"]')];
   const sections = links
     .map((l) => document.querySelector(l.getAttribute("href")))
     .filter(Boolean);
@@ -81,7 +82,9 @@
   // Hero video: loops (empty roof -> finished PV array)
   const heroVideo = document.getElementById("heroVideo");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduceMotion) {
+  if (!heroVideo) {
+    // Unterseiten haben kein Hero-Video
+  } else if (reduceMotion) {
     heroVideo.removeAttribute("autoplay");
     heroVideo.pause();
   } else {
@@ -107,7 +110,7 @@
   // Quick request form (client-side only – no backend connected yet)
   const form = document.getElementById("quickForm");
   const msg = document.getElementById("formMsg");
-  form.addEventListener("submit", (e) => {
+  if (form) form.addEventListener("submit", (e) => {
     e.preventDefault();
     const fields = [...form.querySelectorAll("input[required]")];
     let valid = true;
@@ -129,7 +132,7 @@
     msg.classList.add("is-success");
     form.reset();
   });
-  form.querySelectorAll("input").forEach((f) =>
+  if (form) form.querySelectorAll("input").forEach((f) =>
     f.addEventListener("input", () => f.classList.remove("is-invalid"))
   );
 })();
