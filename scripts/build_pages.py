@@ -26,6 +26,11 @@ SERVICES = [
     ("/leistungen/wartung-service", "Wartung & Service"),
 ]
 
+CITIES = [
+    ("/pv-montage-bremen", "PV-Montage in Bremen"),
+    ("/pv-montage-hannover", "PV-Montage in Hannover"),
+]
+
 REFS = {
     "lilienthal": {
         "img": "ref1.webp", "w": 401, "h": 253,
@@ -228,7 +233,7 @@ PAGES = [
             ("Stadt Bremen", "Alle Stadtteile, von Mitte und Schwachhausen über Findorff und Hemelingen bis Huchting und Obervieland."),
             ("Bremen-Nord", "Vegesack, Burglesum und Blumenthal. Hier haben wir eine 84,5-kWp-Gewerbeanlage gebaut."),
             ("Umland", "Gemeinden rund um Bremen wie Lilienthal und Weyhe, wo unsere Referenzanlagen stehen. Für weitere Orte fragen Sie einfach an."),
-            ("Region Hannover", "Neben Bremen sind wir auch in der Region Hannover im Einsatz."),
+            ("Region Hannover", "Neben Bremen sind wir auch in Hannover und der Region Hannover im Einsatz, mehr dazu auf unserer Hannover-Seite."),
         ],
         "body_title": "Photovoltaik in Bremen: was Sie vorab wissen sollten",
         "body": [
@@ -250,6 +255,48 @@ PAGES = [
             ("Wer ist in Bremen der Netzbetreiber?", "In der Stadt Bremen in der Regel wesernetz. In den Gemeinden im Umland kann ein anderer Netzbetreiber zuständig sein. Die Anmeldung übernimmt unser Partner-Fachplaner."),
             ("Kommen Sie auch ins Bremer Umland?", "Ja. Referenzanlagen von uns stehen zum Beispiel in Lilienthal und Weyhe. Schreiben Sie uns Ihre PLZ, dann sagen wir Ihnen, ob wir zu Ihnen kommen."),
             ("Kann ich mir eine Ihrer Anlagen in Bremen ansehen?", "Fragen Sie uns. Wenn Kunden in Ihrer Nähe einverstanden sind, vermitteln wir gern einen Kontakt."),
+        ],
+    },
+    {
+        "path": "/pv-montage-hannover",
+        "nav": "",
+        "crumb": "PV-Montage in Hannover",
+        "title": "PV-Montage in Hannover & Region | MSH Photovoltaik",
+        "desc": "MSH Photovoltaik montiert PV-Anlagen und Stromspeicher in Hannover und der Region Hannover: Wohnhäuser und Gewerbedächer, mit eigenen Monteuren und Besichtigung vor Ort.",
+        "service_type": "Montage von Photovoltaikanlagen in Hannover",
+        "area_override": [{"@type": "City", "name": "Hannover"}, {"@type": "AdministrativeArea", "name": "Region Hannover"}],
+        "h1": "PV-Montage in Hannover und der Region",
+        "lead": "Neben Bremen montiert MSH Photovoltaik auch in Hannover und den Städten und Gemeinden der Region Hannover. Unsere eigenen Monteure bauen PV-Anlagen und Stromspeicher auf Wohnhäusern und Gewerbedächern.",
+        "img": ("hero-poster.webp", 1280, 652, "Flachdach einer Gewerbehalle mit montierten Solarmodulen"),
+        "included_title": "Was wir in Hannover montieren",
+        "included": [
+            ("Wohnhäuser", "PV-Anlagen auf Einfamilien-, Doppel- und Zweifamilienhäusern, vom Gerüst bis zur Inbetriebnahme."),
+            ("Gewerbe- und Hallendächer", "Aufgeständerte Anlagen auf Flachdächern und Montage auf Trapezblech."),
+            ("Stromspeicher", "Speicher für neue Anlagen oder zum Nachrüsten in eine bestehende Anlage."),
+            ("Erweiterungen", "Wallbox und Speicher in vorhandene Anlagen einbinden."),
+        ],
+        "body_title": "Photovoltaik in Hannover: was Sie vorab wissen sollten",
+        "body": [
+            'In Niedersachsen regelt § 32a der Niedersächsischen Bauordnung die Solarpflicht. Seit 2025 gilt sie auch für neue Wohngebäude, und eine grundlegende Dachsanierung kann sie ebenfalls auslösen. Welche Dächer betroffen sind und welche Ausnahmen es gibt, erklärt das <a href="https://www.mw.niedersachsen.de/" target="_blank" rel="noopener">niedersächsische Bauministerium</a>.',
+            "Netzbetreiber in der Stadt Hannover ist in der Regel enercity Netz. In den Umlandgemeinden der Region kann ein anderer Netzbetreiber zuständig sein. Die Anmeldung und die Planung übernimmt unser Partner-Fachplaner, wir kümmern uns um Montage und Inbetriebnahme.",
+            'Vor dem Auftrag lohnt sich ein Blick auf <a href="https://www.proklima-hannover.de/" target="_blank" rel="noopener">proKlima</a>, den Klimaschutzfonds in Hannover. Er fördert unter anderem Solarstrom. Die Bedingungen ändern sich, und manche Programme müssen vor Beginn der Arbeiten beantragt werden. Fragen Sie deshalb vorher dort nach.',
+            "Viele Häuser in Stadtteilen wie Linden, List oder der Südstadt sind Altbauten mit steilen Dächern und wenig zusammenhängender Fläche. In Gebieten mit Denkmalschutz braucht es vor der Montage eine Genehmigung der Denkmalbehörde.",
+        ],
+        "facts_title": "Auf einen Blick",
+        "facts": [
+            ("Einsatzgebiet", "Stadt Hannover und Region Hannover"),
+            ("Netzbetreiber", "in der Stadt Hannover meist enercity Netz"),
+            ("Solarpflicht", "§ 32a Niedersächsische Bauordnung"),
+            ("Förderung", "proKlima, Bedingungen vorab erfragen"),
+        ],
+        "refs": ["lilienthal", "bremen-nord", "weyhe"],
+        "refs_title": "Beispiele unserer Arbeit aus Bremen und Umland",
+        "services_block": True,
+        "faq": [
+            ("Montieren Sie wirklich in Hannover, obwohl Sie aus Bremen kommen?", "Ja. Neben Bremen und dem Bremer Umland montieren wir auch in Hannover und der Region Hannover. Schreiben Sie uns Ihre PLZ, dann sagen wir Ihnen, wann wir zu Ihnen kommen können."),
+            ("Gilt in Niedersachsen eine Solarpflicht für mein Haus?", "Seit 2025 gilt die Solarpflicht nach § 32a NBauO auch für neue Wohngebäude, und sie kann bei einer grundlegenden Dachsanierung greifen. Ob Ihr Dach betroffen ist, hängt unter anderem von Größe und Zustand ab. Die genauen Regeln stehen in der Bauordnung."),
+            ("Wer ist in Hannover der Netzbetreiber?", "In der Stadt Hannover in der Regel enercity Netz. In Gemeinden der Region kann es ein anderer sein. Die Anmeldung übernimmt unser Partner-Fachplaner."),
+            ("Gibt es in Hannover eine Förderung für Photovoltaik?", "Der Klimaschutzfonds proKlima fördert in Hannover unter anderem Solarstrom. Fragen Sie dort vor dem Auftrag nach den aktuellen Bedingungen, denn einige Programme müssen vor Beginn der Arbeiten beantragt werden."),
         ],
     },
 ]
@@ -326,10 +373,9 @@ def page(p):
             <div class="faq__answer"><p>{escape(a)}</p></div>
           </details>''' for i, (q, a) in enumerate(p["faq"]))
     others = [(h, l) for h, l in SERVICES if h != p["path"]]
-    related_title = "Unsere Leistungen in Bremen" if p.get("services_block") else "Weitere Leistungen"
+    related_title = "Unsere Leistungen" if p.get("services_block") else "Weitere Leistungen"
+    others += [(h, l) for h, l in CITIES if h != p["path"]]
     related = "\n".join(f'          <a class="related__link" href="{h}">{escape(l)} {ICON_ARROW}</a>' for h, l in others)
-    if p["path"] != "/pv-montage-bremen":
-        related += f'\n          <a class="related__link" href="/pv-montage-bremen">PV-Montage in Bremen {ICON_ARROW}</a>'
 
     return f'''<!DOCTYPE html>
 <html lang="de">
@@ -419,7 +465,7 @@ def page(p):
     <section class="section">
       <div class="container">
         <header class="section-head">
-          <h2 class="h2 reveal">{"Referenzen aus der Region" if len(p["refs"]) > 1 else "Referenz aus der Region"}</h2>
+          <h2 class="h2 reveal">{escape(p.get("refs_title") or ("Referenzen aus der Region" if len(p["refs"]) > 1 else "Referenz aus der Region"))}</h2>
         </header>
         <div class="{refs_cls}">
 {refs}
@@ -501,7 +547,7 @@ FOOTER = '''  <footer class="footer">
           <a href="/#ueber-uns">Unternehmen</a>
           <a href="/#ueber-uns">Unser Team</a>
           <a href="/pv-montage-bremen">PV-Montage in Bremen</a>
-          <a href="/#kontakt">Karriere</a>
+          <a href="/pv-montage-hannover">PV-Montage in Hannover</a>
         </div>
         <div class="footer__col">
           <h4>Leistungen</h4>
